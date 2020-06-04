@@ -5,12 +5,12 @@ count = 0
 while True:
     count = count + 1
     x,frame=cam.read()
-    horizontalflip1 = np.rot90(frame)
-    horizontalflip2=cv2.flip(horizontalflip1,-1)
+    verticalflip1 = np.rot90(frame)
+    verticalflip2=cv2.flip(verticalflip1,-1)
     if(count%2==0):
-        cv2.imshow("img",horizontalflip1)
+        cv2.imshow("img",verticalflip1)
     else:
-        cv2.imshow("img",horizontalflip2)
+        cv2.imshow("img",verticalflip2)
     key=cv2.waitKey(5000)
     if key==ord('q'):
         break
