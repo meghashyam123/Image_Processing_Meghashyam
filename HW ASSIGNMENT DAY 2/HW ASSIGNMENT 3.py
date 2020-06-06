@@ -16,7 +16,7 @@ while True :
     passTime = endTime - startTime
     print("passTime= %s" % passTime)
     x , display = cam.read()
-    flipped = cv2.flip(frame,-1)
+    flipped = cv2.flip(display,-1)
     if cv2.waitKey(5) & 0xFF == ord('q') :
         break
     if math.floor(passTime) % counter == 0 :
