@@ -24,7 +24,7 @@ for i in range (1, 8):
         j1 = int(x * (x-1))
         j2 = int(x * x)
 
-        img [ y1:y2, x1:x2 ] = (random.randint (0, 255), random.randint (0, 255), random.randint (0, 255))
+        img [ i1:i2, j1:j2 ] = (random.randint (0, 255), random.randint (0, 255), random.randint (0, 255))
 
         cv2.imshow ('display', img)
         cv2.waitKey(500)
