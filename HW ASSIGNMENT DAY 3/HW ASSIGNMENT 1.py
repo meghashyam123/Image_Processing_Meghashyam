@@ -1,5 +1,7 @@
 import cv2 
+import numpy as np
 import random
+
   
 
 img = cv2.imread('C:\Git\Image_Processing_Meghashyam\HW ASSIGNMENT DAY 3\tiger.jpg')
