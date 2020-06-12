@@ -10,8 +10,8 @@ def mouse(event,x,y,flags,param):
     if len(pts)==4:
         pts1=np.array([pts[0],pts[1],pts[2],pts[3]],np.float32)
         pts2=np.array([(0,0),(500,0),(0,500),(500,500)],np.float32)
-        persp=cv2.getPerspectiveTransform(pts1,pts2)
-        transformed=cv2.warpPerspective(img,persp,(500,500))
+        perspective=cv2.getPerspectiveTransform(pts1,pts2)
+        transformed=cv2.warpPerspective(img,perspective,(500,500))
         cv2.imshow('new',transformed)
 cv2.namedWindow('img')
 cv2.setMouseCallback('img',mouse)
